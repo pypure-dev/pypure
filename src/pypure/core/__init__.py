@@ -7,5 +7,8 @@ class Core(sys.modules[__name__].__class__):
         """Initializes pypure and it's components"""
 
 
+    def quit(self):
+        """Uninitializes and resets pypure"""
+
 # Override the core module
 sys.modules[__name__].__class__ = Core
