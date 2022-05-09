@@ -1,3 +1,4 @@
+import os
 import pypure
 
 from configparser import ConfigParser
