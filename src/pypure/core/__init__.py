@@ -19,6 +19,16 @@ class Core(sys.modules[__name__].__class__):
         if not os.path.exists(config_path) and config:
             config = False
 
+        # Reading configuration files
+        if config:
+            self.config.read([
+                config_path, # User's configuration file
+                self.config.default, # Default configuration file
+            ])
+        else:
+            self.config.read(self.config.default) # Default configuration file
+            self.config.user = config_path
+
         # Initializing pygame
         self.pygame = __import__("pygame")
         self.pygame.init()
