@@ -44,6 +44,11 @@ class Core(sys.modules[__name__].__class__):
         self.pygame.support_prompt = pygame_support_prompt
         self.pygame.init()
 
+        # DEBUG
+        if self.debug:
+            print(f"[Pure] Version: {pypure.__version__}")
+            print(f"[Pure] Config: {config}")
+
     def quit(self):
         """Uninitializes and resets pypure"""
 
