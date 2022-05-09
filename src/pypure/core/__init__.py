@@ -29,8 +29,19 @@ class Core(sys.modules[__name__].__class__):
             self.config.read(self.config.default) # Default configuration file
             self.config.user = config_path
 
+        # Applying configuration
+        self.config.pure = self.config["pure"]
+        self.config.pygame = self.config["tools.pygame"]
+
+        self.debug = self.config.pure.getboolean("debug")
+        pygame_support_prompt = self.config.pygame.getboolean("support_prompt")
+
+        if not pygame_support_prompt:
+            os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "1"
+
         # Initializing pygame
         self.pygame = __import__("pygame")
+        self.pygame.support_prompt = pygame_support_prompt
         self.pygame.init()
 
     def quit(self):
