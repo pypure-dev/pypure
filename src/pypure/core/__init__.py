@@ -6,6 +6,7 @@ from configparser import ConfigParser
 
 
 class Core(sys.modules[__name__].__class__):
+    debug = None
     pygame = sys.modules[__name__].__class__("pygame")
     config = ConfigParser()
     config.user = None
