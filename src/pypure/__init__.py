@@ -7,3 +7,4 @@ __all__ = []
 # Importing the core
 from pypure import core
 from pypure.core import init
+from pypure.core import quit
