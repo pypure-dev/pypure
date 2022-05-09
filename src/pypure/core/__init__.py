@@ -1,8 +1,13 @@
 import pypure
 
+from configparser import ConfigParser
+
 
 class Core(sys.modules[__name__].__class__):
     pygame = sys.modules[__name__].__class__("pygame")
+    config = ConfigParser()
+    config.user = None
+    config.default = f"{os.path.dirname(__file__)}/pure.ini"
 
     def init(self, config=True, config_path=f"{os.getcwd()}/pure.ini"):
         """Initializes pypure and it's components"""
