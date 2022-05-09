@@ -2,6 +2,7 @@ import pypure
 
 
 class Core(sys.modules[__name__].__class__):
+    pygame = sys.modules[__name__].__class__("pygame")
 
     def init(self, config=True, config_path=f"{os.getcwd()}/pure.ini"):
         """Initializes pypure and it's components"""
@@ -12,6 +13,12 @@ class Core(sys.modules[__name__].__class__):
 
     def quit(self):
         """Uninitializes and resets pypure"""
+
+        # Uninitializing pygame
+        self.pygame.quit()
+
+        # Resetting core
+        self = self.__class__(__name__)
 
 
 # Override the core module
