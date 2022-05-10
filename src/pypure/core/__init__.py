@@ -22,11 +22,11 @@ class Core(sys.modules[__name__].__class__):
         # Reading configuration files
         if config:
             self.config.read([
-                config_path, # User's configuration file
-                self.config.default, # Default configuration file
+                config_path,  # User's configuration file
+                self.config.default,  # Default configuration file
             ])
         else:
-            self.config.read(self.config.default) # Default configuration file
+            self.config.read(self.config.default)  # Default configuration file
             self.config.user = config_path
 
         # Applying configuration
