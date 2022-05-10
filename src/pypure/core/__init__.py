@@ -44,6 +44,9 @@ class Core(sys.modules[__name__].__class__):
         self.pygame.support_prompt = pygame_support_prompt
         self.pygame.init()
 
+        from pygame import _sdl2 as SDL2
+        self.pygame.SDL2 = SDL2
+
         # DEBUG
         if self.debug:
             print(f"[Pure] Version: {pypure.__version__}")
