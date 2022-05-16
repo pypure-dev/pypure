@@ -3,6 +3,8 @@ import pypure
 import sys
 
 from configparser import ConfigParser
+from pathlib import Path
+from typing import Union
 
 # Used for setting global variables
 __self__ = sys.modules[__name__]
@@ -16,10 +18,23 @@ config.default = f"{os.path.dirname(__file__)}/pure.ini"
 
 
 def init(
-    config=True,
-    config_path=config.default,
-):
-    """Initializes pypure and it's components"""
+    config: bool = True,
+    config_path: Union[str, Path] = config.default,
+) -> None:
+    """Initializes pypure and it's components.
+
+    Args:
+        config: bool = True
+            Tells if the config file should be used.
+        config_path: Union[str, Path] = ...
+            The config file path to be used.
+
+    Returns:
+        None
+
+    Raises:
+        None
+    """
 
     # Correcting config parameter
     if not os.path.exists(config_path) and config:
@@ -59,11 +74,24 @@ def init(
         print(f"[Pure] Config: {config}")
 
 
-def quit():
-    """Uninitializes and resets pypure"""
+def quit() -> None:
+    """Uninitializes pypure and it's components.
+
+    Args:
+        None
+
+    Returns:
+        None
+
+    Raises:
+        None
+    """
 
     # Uninitializing pygame
     __self__.pygame.quit()
 
     # Resetting core
     sys.modules[__name__] = __self__.__class__(__name__)
+
+
+del Union
