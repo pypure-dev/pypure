@@ -47,7 +47,7 @@ def init(
             __self__.config.default,  # Default configuration file
         ])
     else:
-        __self__.config.read(__self__.config.default)  # Default configuration file
+        __self__.config.read(__self__.config.default)
         __self__.config.user = config_path
 
     # Applying configuration
