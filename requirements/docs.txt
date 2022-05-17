@@ -1,0 +1,4 @@
+mkdocs
+mkdocs-material
+mkdocs-section-index
+jinja2==3.0.0

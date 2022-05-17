@@ -1,0 +1,12 @@
+site_name: PyPure
+repo_url: https://github.com/pypure-dev/pypure
+repo_name: GitHub
+site_author: ZytroCode
+site_description: A powerful game engine written python.
+
+nav:
+  - "Home": "index.md"
+
+theme: material
+plugins:
+  - "section-index"
