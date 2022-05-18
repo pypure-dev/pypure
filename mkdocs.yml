@@ -6,6 +6,7 @@ site_description: A powerful game engine written python.
 
 nav:
   - "Home": "index.md"
+  - "Installation": "installation.md"
 
 theme: material
 plugins:
