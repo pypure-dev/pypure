@@ -10,6 +10,8 @@ nav:
 
   - "Reference":
     - "pypure": "reference/pypure.md"
+    - "pypure.core": "reference/pypure.core.md"
+
 theme:
   name: material
   palette:
