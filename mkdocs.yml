@@ -13,5 +13,14 @@ theme:
   palette:
     scheme: default
     accent: indigo
+  features:
+    - toc.integrate
+    - header.autohide
+    - search.highlight
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
 plugins:
   - "section-index"
