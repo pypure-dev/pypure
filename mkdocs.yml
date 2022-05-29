@@ -8,6 +8,10 @@ nav:
   - "Home": "index.md"
   - "Installation": "installation.md"
 
-theme: material
+theme:
+  name: material
+  palette:
+    scheme: default
+    accent: indigo
 plugins:
   - "section-index"
