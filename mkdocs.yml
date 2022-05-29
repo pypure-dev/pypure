@@ -8,6 +8,8 @@ nav:
   - "Home": "index.md"
   - "Installation": "installation.md"
 
+  - "Reference":
+    - "pypure": "reference/pypure.md"
 theme:
   name: material
   palette:
